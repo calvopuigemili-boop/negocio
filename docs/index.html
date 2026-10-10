@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Autónomo 2027</title>
+<meta name="description" content="Plantilla para autónomos: facturas, gastos, Modelo 303 (IVA) y Modelo 130 (IRPF) calculados automáticamente. Pago único.">
+<style>
+  :root { --azul:#1f3a5f; --acento:#ff7a00; --fondo:#ffffff; --texto:#1d1d1f; --suave:#f4f6fa; --gris:#5f6368; }
+  @media (prefers-color-scheme: dark) {
+    :root { --azul:#8fb4e8; --fondo:#121417; --texto:#eceff3; --suave:#1c2026; --gris:#a8adb5; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--fondo); color:var(--texto); line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  header { padding:64px 0 48px; text-align:center; }
+  h1 { font-size:clamp(1.9rem,5vw,3rem); line-height:1.15; margin:0 0 16px; color:var(--azul); }
+  .sub { font-size:1.2rem; color:var(--gris); max-width:640px; margin:0 auto 32px; }
+  .btn { display:inline-block; background:var(--acento); color:#fff; text-decoration:none; font-weight:700; font-size:1.15rem; padding:16px 32px; border-radius:10px; }
+  .btn:hover { filter:brightness(1.08); }
+  .precio { margin-top:12px; color:var(--gris); }
+  .precio s { margin-right:6px; }
+  .aviso { display:inline-block; background:var(--suave); padding:6px 14px; border-radius:20px; font-size:.9rem; margin-bottom:20px; }
+  section { padding:40px 0; }
+  h2 { color:var(--azul); font-size:1.6rem; text-align:center; margin:0 0 28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .card { background:var(--suave); border-radius:12px; padding:20px; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; }
+  .card p { margin:0; color:var(--gris); }
+  table { width:100%; border-collapse:collapse; }
+  td, th { padding:12px; border-bottom:1px solid var(--suave); text-align:left; }
+  th { color:var(--gris); font-weight:600; }
+  .si { color:#2e7d32; font-weight:700; }
+  .no { color:#c62828; }
+  details { background:var(--suave); border-radius:10px; padding:14px 18px; margin-bottom:10px; }
+  summary { cursor:pointer; font-weight:600; }
+  footer { padding:40px 0; text-align:center; color:var(--gris); font-size:.85rem; }
+  .cta { text-align:center; padding:56px 0; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="aviso">⏰ Plazo del 3T: 20 de octubre</div>
+  <h1>Sabe cuánto pagas de IVA e IRPF<br>antes de que llegue el trimestre</h1>
+  <p class="sub">Una hoja de cálculo para autónomos: apuntas facturas y gastos y calcula sola el <strong>Modelo 303</strong> y el <strong>Modelo 130</strong>, y te genera la factura en PDF.</p>
+  <a class="btn" href="https://TU-USUARIO.gumroad.com/l/kit-autonomo">Descargar el Kit por 9 €</a>
+  <div class="precio"><s>19 €</s> precio de lanzamiento · pago único · descarga inmediata</div>
+</header>
+
+<section class="wrap">
+  <h2>Qué incluye</h2>
+  <div class="grid">
+    <div class="card"><h3>🧾 Facturas emitidas</h3><p>IVA, retención de IRPF y total a cobrar calculados al instante.</p></div>
+    <div class="card"><h3>💸 Gastos deducibles</h3><p>Por categoría y con % deducible (ideal para luz, internet o móvil).</p></div>
+    <div class="card"><h3>📊 Modelo 303 y 130</h3><p>Resultado de los 4 trimestres, con acumulados y retenciones.</p></div>
+    <div class="card"><h3>📄 Generador de facturas</h3><p>Escribes el número de factura y sale lista para exportar a PDF.</p></div>
+    <div class="card"><h3>📈 Resumen mensual</h3><p>Ingresos, gastos, beneficio, pendiente de cobro y gráfico.</p></div>
+    <div class="card"><h3>💻 Funciona en todo</h3><p>Excel, Google Sheets y LibreOffice. Sin instalar nada.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>¿Por qué no un programa de facturación?</h2>
+  <table>
+    <tr><th></th><th>Kit Autónomo</th><th>Software por suscripción</th></tr>
+    <tr><td>Precio</td><td class="si">9 € una vez</td><td class="no">10-30 € al mes</td></tr>
+    <tr><td>Cálculo 303 y 130</td><td class="si">Sí</td><td>Según el plan</td></tr>
+    <tr><td>Tus datos</td><td class="si">En tu ordenador</td><td>En sus servidores</td></tr>
+    <tr><td>Curva de aprendizaje</td><td class="si">5 minutos</td><td>Horas</td></tr>
+  </table>
+</section>
+
+<section class="wrap">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Sirve si acabo de darme de alta?</summary><p>Sí. Pon un 7 % de retención en la hoja «Config» si estás en tus 3 primeros años.</p></details>
+  <details><summary>¿Puedo usarlo en Google Sheets?</summary><p>Sí. Súbelo a Google Drive y ábrelo con Hojas de cálculo de Google.</p></details>
+  <details><summary>¿Sustituye a mi gestor?</summary><p>No. Te da un cálculo orientativo y lo tienes todo ordenado, para que presentes tú o tu gestor sin sorpresas. Casos especiales (módulos, recargo de equivalencia, operaciones intracomunitarias) no están cubiertos.</p></details>
+  <details><summary>¿Y si no me gusta?</summary><p>Escríbeme en los primeros 14 días y te devuelvo el dinero.</p></details>
+</section>
+
+<div class="cta wrap">
+  <a class="btn" href="https://TU-USUARIO.gumroad.com/l/kit-autonomo">Quiero el Kit por 9 €</a>
+  <div class="precio">Pago seguro a través de Gumroad</div>
+</div>
+
+<footer class="wrap">Kit Autónomo · Herramienta de organización y cálculo orientativo. No constituye asesoramiento fiscal.</footer>
+</body>
+</html>
