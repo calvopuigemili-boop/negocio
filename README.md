@@ -21,3 +21,18 @@ que se vende en Gumroad a 9 €. Análisis completo en [ANALISIS.md](ANALISIS.md
 3. Sustituye `https://TU-USUARIO.gumroad.com/l/kit-autonomo` en `docs/index.html` por tu enlace real.
 4. En GitHub: Settings → Pages → Branch: tu rama, carpeta `/docs` → Save.
 5. Publica los posts de `marketing/publicaciones.md` (1-2 al día) hasta el 20 de octubre.
+
+---
+
+# Negocio 2: tienda Shopify «Huella & Co.» (mascotas, 0 € de inversión)
+
+Todo en [`tienda-mascotas/`](tienda-mascotas/):
+
+| Archivo | Qué es |
+|---|---|
+| `1-ESTUDIO-NICHOS.md` | Comparativa de 6 nichos y por qué gana mascotas |
+| `2-PROVEEDOR-Y-PRODUCTOS.md` | CJdropshipping (gratis), los 12 productos, precios y números |
+| `3-PLAN-MARKETING.md` | Plan 100 % orgánico: 30 días de vídeos, mensajes para influencers y protectoras, SEO y email |
+| `4-CHECKLIST-TIENDA.md` | Qué está hecho en Shopify y qué te falta (≈1 hora) |
+| `5-POLITICAS-LEGALES.md` | Textos legales para pegar en Shopify |
+| `logo-huella.png` / `.svg` | Logo |
