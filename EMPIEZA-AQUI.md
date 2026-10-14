@@ -1,7 +1,7 @@
 # Empieza aquí: plan para tu situación
 
 **Tu perfil:** sin programar (pero sigues pasos), 10 min/día o 1 h el fin de semana, cuenta de
-PayPal, mercado España, y quieres currar lo mínimo.
+PayPal, mercado España, quieres currar lo mínimo y **no tratar con personas**.
 
 **Decisión:** vendemos **Kit Autónomo** (`producto/Kit-Autonomo-2027.xlsx`), una plantilla Excel
 que calcula el IVA (Modelo 303) y el IRPF (Modelo 130) de los autónomos. Está hecha y probada.
@@ -33,35 +33,36 @@ devoluciones y vídeos diarios. No es pasiva.
 6. Publica y copia tu enlace (algo como `payhip.com/b/XXXX`).
 7. ✅ Hecho: tienda en https://payhip.com/b/OPcw6 (enlace ya puesto en la web y en los posts).
 
-## Paso 2 — Traer compradores (10 min al día, las 2 primeras semanas)
+## Paso 2 — Traer compradores sin tratar con nadie (≈ 15 min, una sola vez)
 
-El producto no se vende solo si nadie lo ve. Esta es la única parte con algo de esfuerzo, y es
-temporal.
+Los compradores llegan desde **Google**. En `docs/` hay 6 guías que responden lo que buscan los
+autónomos («cómo calcular el modelo 130», «gastos deducibles autónomos», plazos…). Cada guía
+enlaza a tu producto. Tú no hablas con nadie y no publicas nada.
 
-| Día | Tarea (≤ 10 min) |
-|---|---|
-| 1 | Envía el «Mensaje directo» de `marketing/publicaciones.md` a 3 conocidos autónomos |
-| 2 | Únete a 2 grupos de Facebook/Telegram de autónomos (solo leer) |
-| 3 | Publica el post de Reddit en r/autonomos (lee antes sus normas) |
-| 4 | Publica el «Post 1» en LinkedIn o X |
-| 5 | Responde 2 dudas sobre IVA o IRPF en esos grupos, sin enlazar nada |
-| 6 | Publica el mensaje de grupos en 1 grupo que permita compartir recursos |
-| 7 | Mira en Payhip visitas y ventas. Cuéntamelo y ajusto precio o texto |
-| 8-14 | Repite lo que mejor funcionó, 1 publicación al día como máximo |
+1. **Activar la web (2 min):** en GitHub, abre tu repositorio `negocio` → *Settings* → *Pages* →
+   en *Branch* elige `claude/vigilant-curie-2gaaub` y la carpeta `/docs` → *Save*. En unos minutos
+   estará en `https://calvopuigemili-boop.github.io/negocio/`.
+2. **Avisar a Google (10 min, opcional pero acelera mucho):** entra en
+   *search.google.com/search-console* con tu cuenta de Google → *Añadir propiedad* → *Prefijo de
+   la URL* → pega la dirección de arriba → verifica con la opción *Etiqueta HTML* (pásame el
+   código que te da y lo pongo yo). Después, en *Sitemaps*, escribe `sitemap.xml` → *Enviar*.
+3. **En Payhip**, en la descripción del producto, puedes añadir al final:
+   «Guías gratis: https://calvopuigemili-boop.github.io/negocio/guias.html».
 
-Después basta con **1 publicación al mes**, en la semana anterior a cada plazo. Los plazos son
-del 1 al 20 de abril, julio y octubre, y del 1 al 30 de enero. Esos son los picos de demanda.
+**Ojo, sin humo:** Google tarda entre **1 y 4 meses** en mandar visitas a una web nueva. Es lento
+al principio, pero luego funciona solo. Cada mes que quieras te escribo más guías; tú no haces nada.
 
 ## Paso 3 — Mantenimiento (≈ 1 h al año)
 
 - **Diciembre:** pídeme la versión del año siguiente. La subes a Payhip con *Update file* y los
   compradores reciben la actualización.
-- **Emails de clientes:** las dudas típicas ya están respondidas en la hoja «Instrucciones».
+- **Emails de clientes:** las dudas típicas ya están respondidas en la hoja «Instrucciones». No
+  prometemos soporte ni devoluciones personales en la web.
 
 ## Qué puedes esperar (sin humo)
 
-- **Primer mes:** de 0 a 10 ventas, según cuánto muevas el Paso 2. Neto: ~7,70 € por venta.
-- **Después:** algo de goteo por búsquedas y posts antiguos, más picos en cada trimestre.
+- **Primeros 1-2 meses:** probablemente 0 ventas, mientras Google indexa la web.
+- **Después:** goteo de ventas por búsquedas, con picos en cada plazo trimestral. Neto: ~7,70 € por venta.
 - **Esto no es un sueldo.** Es un activo pequeño que, bien movido, puede dar decenas o algún
   centenar de euros al mes. Si funciona, ampliamos el catálogo (versión Pro, plantilla de
   presupuestos, plantilla de finanzas personales) con el mismo trabajo por tu parte.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://calvopuigemili-boop.github.io/negocio/sitemap.xml
