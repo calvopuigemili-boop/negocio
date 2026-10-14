@@ -303,7 +303,7 @@ def main():
     )
     (DOCS / "guias.html").write_text(indice, encoding="utf-8")
 
-    urls = ["", "guias.html"] + [a["archivo"] for a in ARTICULOS]
+    urls = ["", "guias.html", "enlaces.html"] + [a["archivo"] for a in ARTICULOS]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += "".join(f"  <url><loc>{BASE}{u}</loc></url>\n" for u in urls)
     sitemap += "</urlset>\n"

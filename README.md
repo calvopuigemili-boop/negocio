@@ -48,3 +48,9 @@ Todo en [`tienda-mascotas/`](tienda-mascotas/):
 Todo en [`tienda-camisetas/`](tienda-camisetas/). Empieza por
 [`tienda-camisetas/EMPIEZA-AQUI.md`](tienda-camisetas/EMPIEZA-AQUI.md).
 Diseños regenerables con `python3 scripts/generar_disenos.py` y `python3 scripts/generar_marca.py`.
+
+## TikTok @modoautonomo
+
+14 publicaciones listas (imágenes + vídeo + texto) en [`tiktok/`](tiktok/). Instrucciones en
+[`tiktok/EMPIEZA-AQUI.md`](tiktok/EMPIEZA-AQUI.md). Regenerar: `cd scripts && python3 generar_tiktok.py`.
+Página de enlaces para la bio: `docs/enlaces.html`.
