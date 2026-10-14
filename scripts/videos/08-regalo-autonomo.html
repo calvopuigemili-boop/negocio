@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+body{background:radial-gradient(circle at 50% 35%,#fbf8f3,#e7ddcf)}
+.escena{position:absolute;left:0;right:0;top:420px;height:1000px;display:flex;align-items:center;justify-content:center}
+.prod{position:absolute;display:flex;flex-direction:column;align-items:center;gap:36px}
+.chip{font-family:"TikTok Sans";font-weight:700;font-size:48px;background:#151515;color:#fff;padding:14px 30px;border-radius:60px}
+.num{position:absolute;top:300px;right:70px;font-family:"TikTok Sans";font-weight:800;font-size:44px;color:#151515;opacity:.5}
+.lazo{position:absolute;top:1560px;left:0;right:0;text-align:center;font-family:"TikTok Sans";font-weight:600;font-size:40px;color:#6b6257}
+</style></head>
+<body><div class="escena"></div><div class="num"></div><div class="lazo">Las hacen bajo pedido y te llegan a casa 📦</div>
+<script src="base.js"></script>
+<script>
+const PRODS = [
+  { tipo: 'camiseta', d: '07-hacienda-me-quiere', chip: 'Hacienda me quiere' },
+  { tipo: 'taza', d: '08-funciono-con-cafe', chip: 'Funciono con café al 21 %' },
+  { tipo: 'camiseta', d: '04-mi-jefe-es-un-explotador', chip: 'Mi jefe es un explotador' },
+  { tipo: 'taza', d: '02-esto-desgrava', chip: '¿Esto desgrava?' },
+  { tipo: 'camiseta', d: '09-nunca-de-baja', chip: 'Nunca de baja' },
+];
+const escena = document.querySelector('.escena'), num = document.querySelector('.num');
+const T0 = 2.0, PASO = 2.1;
+PRODS.forEach((p, i) => {
+  p.nodo = el('div', 'prod');
+  p.nodo.appendChild(p.tipo === 'taza' ? taza(p.d, 560) : camiseta(p.d, 720));
+  p.nodo.appendChild(el('div', 'chip', p.chip));
+  escena.appendChild(p.nodo);
+  p.t = T0 + i * PASO;
+  sonido(p.t, 'swoosh');
+});
+const rot = rotulo('Si tienes un amigo autónomo, ya sabes qué regalarle 🎁', 170);
+const lazo = document.querySelector('.lazo');
+const T_CIERRE = T0 + PRODS.length * PASO + 0.2;
+const cierre = crearCierre('camiseta', '01-autonomo-todo-en-uno', 'Tienda Modo Autónomo: camisetas y tazas', T_CIERRE);
+window.DURATION = T_CIERRE + 3.3;
+window.render = t => {
+  PRODS.forEach((p, i) => {
+    const entra = easeOut(prog(t, p.t, 0.5)), sale = easeInOut(prog(t, p.t + PASO - 0.4, 0.4));
+    const x = (1 - entra) * 1100 - sale * 1100;
+    const rotz = (1 - entra) * 8 - sale * 8 + Math.sin((t - p.t) * 2) * 1.2;
+    p.nodo.style.transform = `translateX(${x}px) rotate(${rotz}deg)`;
+    p.nodo.style.opacity = t >= p.t && sale < 1 ? 1 : 0;
+    if (t >= p.t && t < p.t + PASO) num.textContent = `${i + 1}/${PRODS.length}`;
+  });
+  num.style.opacity = t >= T0 && t < T_CIERRE ? .5 : 0;
+  lazo.style.opacity = prog(t, T0 + 0.5, 0.4) * (1 - prog(t, T_CIERRE - 0.3, 0.3));
+  animarRotulo(rot, t, 0.2, T_CIERRE - 0.2);
+  animarCierre(cierre, t, T_CIERRE);
+};
+render(0);
+</script></body></html>

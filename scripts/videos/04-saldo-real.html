@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+#pantalla{background:#f2f3f7}
+.cab{position:absolute;top:0;left:0;right:0;height:300px;background:linear-gradient(160deg,#16324f,#1f4f7a);color:#fff}
+.cab .top{position:absolute;top:56px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;font-size:15px;opacity:.9}
+.cab .cuenta{position:absolute;top:100px;left:20px;font-size:14px;opacity:.8}
+.cab .saldo{position:absolute;top:124px;left:20px;font-size:44px;font-weight:700;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.cab .etq{position:absolute;top:184px;left:20px;font-size:14px;padding:4px 10px;border-radius:12px;background:rgba(255,255,255,.14)}
+.cab .acciones{position:absolute;top:226px;left:20px;right:20px;display:flex;justify-content:space-between}
+.cab .acciones div{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11.5px;opacity:.9}
+.cab .acciones i{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.15);display:block}
+.movs{position:absolute;top:316px;left:14px;right:14px}
+.movs h3{font-size:15px;color:#555;margin:0 4px 10px;font-weight:600}
+.mov{background:#fff;border-radius:14px;padding:13px 14px;margin-bottom:9px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.mov .ico{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex:none}
+.mov .txt{flex:1;font-size:14.5px;line-height:1.3}.mov .txt small{color:#8a8f98;font-size:12px}
+.mov .imp{font-weight:700;font-size:15.5px;font-variant-numeric:tabular-nums}
+.nota{position:absolute;bottom:22px;left:20px;right:20px;color:#8a8f98;font-size:11.5px;text-align:center}
+</style></head>
+<body><div id="pantalla">
+  <div class="cab"><div class="top"><span>Hola 👋</span><span>🔔</span></div>
+    <div class="cuenta">Cuenta Negocio · ES21 •••• 4471</div>
+    <div class="saldo">8.470,00 €</div><div class="etq">Saldo disponible</div>
+    <div class="acciones"><div><i></i>Enviar</div><div><i></i>Bizum</div><div><i></i>Tarjetas</div><div><i></i>Más</div></div></div>
+  <div class="movs"><h3>Lo que no es tuyo</h3></div>
+  <div class="nota">Ejemplo: 7.000 € facturados + IVA y 1.400 € de gastos en el trimestre. Orientativo.</div>
+</div>
+<script src="base.js"></script>
+<script>
+document.querySelector('.cab').insertAdjacentHTML('afterbegin', barraEstado('#fff'));
+const PASOS = [
+  { t: 3.2, ico: '🧾', fondo: '#fde8e6', txt: 'IVA cobrado', sub: 'Es de Hacienda (Modelo 303)', imp: 1470 },
+  { t: 6.4, ico: '📊', fondo: '#fff1dc', txt: 'IRPF del trimestre', sub: '20 % del beneficio (Modelo 130)', imp: 1120 },
+  { t: 9.6, ico: '🛟', fondo: '#e4effd', txt: 'Colchón para la renta', sub: '≈ 5 % del beneficio', imp: 280 },
+];
+const movs = document.querySelector('.movs'), saldo = document.querySelector('.saldo'), etq = document.querySelector('.etq');
+PASOS.forEach(p => {
+  p.nodo = el('div', 'mov', `<div class="ico" style="background:${p.fondo}">${p.ico}</div><div class="txt">${p.txt}<br><small>${p.sub}</small></div><div class="imp" style="color:#d93025">−${euros(p.imp)}</div>`);
+  movs.appendChild(p.nodo);
+  sonido(p.t, 'pop');
+  for (let k = 0; k < 14; k++) sonido(p.t + 0.35 + k * 0.06, 'tic');
+});
+const rot1 = rotulo('Lo que veo en el banco vs lo que es mío de verdad', 1580);
+const rot2 = rotulo('Por eso lo aparto cada mes en otra cuenta 👀', 1580, true);
+const T_CIERRE = 15.2;
+const cierre = crearCierre('kit', null, 'La plantilla que te lo calcula sola', T_CIERRE);
+window.DURATION = 18.5;
+window.render = t => {
+  let s = 8470;
+  PASOS.forEach((p, i) => {
+    const a = easeOut(prog(t, p.t, 0.35));
+    p.nodo.style.opacity = a;
+    p.nodo.style.transform = `translateX(${(1 - a) * 60}px)`;
+    s -= p.imp * easeInOut(prog(t, p.t + 0.35, 0.85));
+  });
+  saldo.textContent = euros(Math.round(s * 100) / 100);
+  const fin = prog(t, 11.2, 0.4);
+  etq.textContent = fin > 0.5 ? 'Lo que de verdad es tuyo ✅' : 'Saldo disponible';
+  etq.style.background = fin > 0.5 ? 'rgba(46,204,113,.35)' : 'rgba(255,255,255,.14)';
+  saldo.style.transform = `scale(${1 + 0.08 * Math.sin(Math.PI * prog(t, 11.2, 0.5))})`;
+  saldo.style.transformOrigin = '0 50%';
+  animarRotulo(rot1, t, 0.2, 11.6);
+  animarRotulo(rot2, t, 11.9, T_CIERRE - 0.2);
+  animarCierre(cierre, t, T_CIERRE);
+};
+render(0);
+</script></body></html>

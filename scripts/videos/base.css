@@ -1,0 +1,59 @@
+@font-face { font-family:"TikTok Sans"; src:url(fuentes/TikTokSans-400.ttf); font-weight:400; }
+@font-face { font-family:"TikTok Sans"; src:url(fuentes/TikTokSans-600.ttf); font-weight:600; }
+@font-face { font-family:"TikTok Sans"; src:url(fuentes/TikTokSans-700.ttf); font-weight:700; }
+@font-face { font-family:"TikTok Sans"; src:url(fuentes/TikTokSans-800.ttf); font-weight:800; }
+@font-face { font-family:"UI"; src:url(fuentes/Inter-400.ttf); font-weight:400; }
+@font-face { font-family:"UI"; src:url(fuentes/Inter-500.ttf); font-weight:500; }
+@font-face { font-family:"UI"; src:url(fuentes/Inter-600.ttf); font-weight:600; }
+@font-face { font-family:"UI"; src:url(fuentes/Inter-700.ttf); font-weight:700; }
+@font-face { font-family:"Anton"; src:url(fuentes/Anton.ttf); }
+@font-face { font-family:"Archivo Black"; src:url(fuentes/ArchivoBlack.ttf); }
+@font-face { font-family:"Permanent Marker"; src:url(fuentes/PermanentMarker.ttf); }
+@font-face { font-family:"DM Serif Display"; src:url(fuentes/DMSerifDisplay.ttf); }
+@font-face { font-family:"Bebas Neue"; src:url(fuentes/BebasNeue.ttf); }
+
+html, body { margin:0; width:1080px; height:1920px; overflow:hidden; }
+body { font-family:"UI", sans-serif; -webkit-font-smoothing:antialiased; background:#000; }
+
+/* Pantalla en puntos de iPhone (390 × 693) escalada a 1080 × 1920 */
+#pantalla { position:absolute; left:0; top:0; width:390px; height:693.33px;
+            transform:scale(2.7692); transform-origin:0 0; overflow:hidden; }
+
+/* Barra de estado */
+.estado { position:absolute; top:0; left:0; right:0; height:44px; display:flex; align-items:center;
+          justify-content:space-between; padding:0 26px 0 34px; font-weight:600; font-size:15.5px; z-index:5; }
+.estado .iconos { display:flex; gap:5px; align-items:center; }
+.estado .bat { width:24px; height:11.5px; border:1.3px solid currentColor; border-radius:3.5px; position:relative; opacity:.9 }
+.estado .bat::after { content:""; position:absolute; inset:1.5px; right:5px; background:currentColor; border-radius:1.5px }
+.estado .barras { display:flex; gap:1.6px; align-items:flex-end; height:11px }
+.estado .barras i { width:3px; background:currentColor; border-radius:1px }
+
+/* Teclado iOS */
+.teclado { position:absolute; left:0; right:0; bottom:0; height:262px; background:#d1d3d9;
+           padding:8px 3px 0; box-sizing:border-box; z-index:6; }
+.teclado .fila { display:flex; justify-content:center; gap:6px; margin-bottom:11px; }
+.teclado .k { width:32.5px; height:42px; background:#fff; border-radius:5px; box-shadow:0 1px 0 #898a8d;
+              display:flex; align-items:center; justify-content:center; font-size:22.5px; color:#000; position:relative; }
+.teclado .k.esp { background:#abb0ba; font-size:15px; }
+.teclado .k.on { background:#abb0ba; }
+.teclado .k .globo { position:absolute; bottom:30px; left:50%; width:52px; height:64px; margin-left:-26px;
+                     background:#fff; border-radius:9px; box-shadow:0 2px 6px rgba(0,0,0,.3);
+                     display:flex; align-items:flex-start; justify-content:center; padding-top:8px;
+                     font-size:34px; box-sizing:border-box; }
+.teclado .barra-esp { width:184px; font-size:15px; }
+
+/* Rótulo estilo TikTok (texto con fondo blanco) */
+.rotulo { position:absolute; left:60px; right:60px; text-align:center; z-index:20;
+          font-family:"TikTok Sans"; font-weight:700; font-size:58px; line-height:1.38; }
+.rotulo span { background:#fff; color:#000; padding:6px 22px; border-radius:16px;
+               -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.rotulo.negro span { background:#000; color:#fff; }
+
+/* Cierre con producto */
+#cierre { position:absolute; inset:0; z-index:30; display:flex; flex-direction:column; align-items:center; background:radial-gradient(circle at 50% 40%, #fbf8f3, #e9e2d6) !important;
+          justify-content:center; gap:40px; background:#f3efe8; font-family:"TikTok Sans"; color:#151515; opacity:0; }
+#cierre .t1 { font-weight:800; font-size:76px; text-align:center; line-height:1.1; padding:0 80px; }
+#cierre .t2 { font-weight:600; font-size:50px; color:#fff; background:#e8590c; padding:16px 38px; border-radius:60px; }
+.mock { position:relative; }
+.mock svg { display:block; }
+.mock img.estampado { position:absolute; mix-blend-mode:multiply; }

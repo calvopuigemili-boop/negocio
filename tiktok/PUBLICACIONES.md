@@ -1,116 +1,73 @@
-# Publicaciones de TikTok (copiar y pegar)
+# Publicaciones de TikTok: orden y textos
 
-Cada carpeta tiene las imágenes (carrusel) y `video.mp4`. Sube **una de las dos cosas**.
-Elige el sonido dentro de TikTok (uno que esté en tendencia).
+Cada carpeta tiene `video.mp4` (con efectos de sonido incluidos) y `portada.jpg`.
+Publica en este orden, uno cada 1-2 días. Copia el texto tal cual.
 
-## 01-cosas-que-solo-entiende-un-autonomo
+| Orden | Carpeta | Lleva a | Cuándo |
+|---|---|---|---|
+| 1 | `01-cobrar-factura` | Camisetas | Cuando quieras |
+| 2 | `04-saldo-real` | Kit | Cuando quieras |
+| 3 | `02-que-desgrava` | Camisetas | Cuando quieras |
+| 4 | `05-modelo-130` | Kit | Mejor en la primera quincena de enero, abril, julio u octubre |
+| 5 | `03-horario-autonomo` | Camisetas | Cuando quieras |
+| 6 | `06-hoja-impuestos` | Kit | Cuando quieras |
+| 7 | `08-regalo-autonomo` | Camisetas | **Finales de noviembre o diciembre** (regalos) |
+| 8 | `07-dia-20` | Camisetas | **El día 20 de abril, julio u octubre, o el 30 de enero** |
 
+---
+
+## 01-cobrar-factura
 ```
-¿Cuántas te han pasado? 😅
+El cliente siempre paga… algún día 🙃 ¿Te ha pasado?
 
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
-```
-
-## 02-mi-horario-real
-
-```
-Horario de autónomo: de lunes a lunes 🫠
-
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
-```
-
-## 03-tipos-de-clientes
-
-```
-¿Cuál es el tuyo? 👀
-
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
+#autonomos #autonomo #freelance #humorautonomos #facturas #emprendedores
 ```
 
-## 04-vacaciones-de-autonomo
-
+## 02-que-desgrava
 ```
-El portátil también necesita playa 🏝️
+Spoiler: casi nada de lo divertido desgrava 🥲 (la cuota sí)
 
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
-```
-
-## 05-pov-plazo-del-trimestre
-
-```
-Un trimestre más superado 🫡
-
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
+#autonomos #gestoria #hacienda #humorautonomos #freelance #desgravar
 ```
 
-## 06-organigrama-de-mi-empresa
-
+## 03-horario-autonomo
 ```
-Plantilla de la empresa: 1 persona 😂
+Libertad de horario, decían 🫠
 
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
-```
-
-## 07-mi-relacion-con-hacienda
-
-```
-Una relación estable 💘
-
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
+#autonomos #emprendedores #freelance #humorautonomos #trabajo #españa
 ```
 
-## 08-desgrava-segun-mi-cabeza
-
+## 04-saldo-real
 ```
-Spoiler: el café no 😭 (info orientativa, consulta a tu gestor)
+El error que más sustos da al autónomo: gastarse el IVA 😬 (ejemplo orientativo)
 
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa
-```
-
-## 09-calcular-modelo-303
-
-```
-Guárdalo para el próximo trimestre 📌 Info orientativa.
-
-#autonomos #hacienda #iva #irpf #finanzaspersonales #freelance
+#autonomos #iva #irpf #finanzaspersonales #hacienda #freelance
 ```
 
-## 10-calcular-modelo-130
-
+## 05-modelo-130
 ```
-El error más común: calcular solo el trimestre 👀 Info orientativa.
+Guárdalo para el próximo trimestre 📌 Info orientativa: cada caso es distinto.
 
-#autonomos #hacienda #iva #irpf #finanzaspersonales #freelance
-```
-
-## 11-cuanto-apartar-cada-mes
-
-```
-La regla que me salvó de los sustos 🙏 Info orientativa.
-
-#autonomos #hacienda #iva #irpf #finanzaspersonales #freelance
+#autonomos #modelo130 #irpf #hacienda #freelance #impuestos
 ```
 
-## 12-gastos-que-no-sabias-que-desgravan
-
+## 06-hoja-impuestos
 ```
-¿Conocías el 5 %? Info orientativa, consulta a tu gestor.
+Pago único, sin cuotas. Link en el perfil 👆
 
-#autonomos #hacienda #iva #irpf #finanzaspersonales #freelance
-```
-
-## 13-plazos-2027
-
-```
-Ponlo en el calendario 🗓️
-
-#autonomos #hacienda #iva #irpf #finanzaspersonales #freelance
+#autonomos #excel #plantillaexcel #iva #irpf #freelance
 ```
 
-## 14-elige-tu-favorita
-
+## 07-dia-20
 ```
-¿Con cuál te quedas? 👇
+Feliz día 20 a quien le toque 🫡
 
-#autonomos #autonomo #humorautonomos #freelance #emprendedores #españa #regalo #regalooriginal
+#autonomos #hacienda #iva #humorautonomos #freelance #trimestre
+```
+
+## 08-regalo-autonomo
+```
+Para ese amigo que siempre pregunta si algo desgrava 🎁
+
+#regalo #regalooriginal #autonomos #regalosnavidad #humorautonomos #camisetas
 ```

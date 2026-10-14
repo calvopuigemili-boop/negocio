@@ -1,6 +1,6 @@
 # Kit Autónomo — negocio de producto digital con inversión 0 €
 
-> 👉 **Empieza por [EMPIEZA-AQUI.md](EMPIEZA-AQUI.md)**: plan adaptado (Payhip + PayPal, 10 min/día).
+> 👉 **Empieza por [PASO-A-PASO.md](PASO-A-PASO.md)**: todo lo que tienes que hacer, en orden.
 
 Plantilla de hoja de cálculo para autónomos españoles (facturas, gastos, Modelo 303 y Modelo 130)
 que se vende en Gumroad a 9 €. Análisis completo en [ANALISIS.md](ANALISIS.md).
@@ -51,6 +51,7 @@ Diseños regenerables con `python3 scripts/generar_disenos.py` y `python3 script
 
 ## TikTok @modoautonomo
 
-14 publicaciones listas (imágenes + vídeo + texto) en [`tiktok/`](tiktok/). Instrucciones en
-[`tiktok/EMPIEZA-AQUI.md`](tiktok/EMPIEZA-AQUI.md). Regenerar: `cd scripts && python3 generar_tiktok.py`.
+8 vídeos animados (con sonido) en [`tiktok/`](tiktok/), con orden y textos en
+[`tiktok/PUBLICACIONES.md`](tiktok/PUBLICACIONES.md). Se generan con
+`python3 scripts/videos/render.py` (cada vídeo es un HTML en `scripts/videos/`).
 Página de enlaces para la bio: `docs/enlaces.html`.

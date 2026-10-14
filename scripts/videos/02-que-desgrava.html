@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div id="pantalla"></div>
+<script src="base.js"></script><script src="chat.js"></script>
+<script>
+montarChat({
+  contacto: 'Mi gestor', iniciales: 'MG', colorAvatar: '#3f6e8c',
+  rotulo: { texto: 'Preguntándole a mi gestor qué desgrava:', t0: 0.15, t1: 17.0 },
+  duracion: 21,
+  mensajes: [
+    { de: 'yo', texto: '¿Netflix desgrava? Es para inspirarme', t: 2.9, cps: 16 },
+    { de: 'el', texto: 'No.', t: 4.0, pensar: 0.7 },
+    { de: 'yo', texto: '¿Y el café de cada mañana?', t: 6.0, cps: 16 },
+    { de: 'el', texto: 'No.', t: 6.9, pensar: 0.6 },
+    { de: 'yo', texto: '¿Y el gimnasio? Es salud laboral 💪', t: 9.2, cps: 16 },
+    { de: 'el', texto: 'Tampoco.', t: 10.3, pensar: 0.8 },
+    { de: 'yo', texto: '¿Y la cuota de autónomos?', t: 12.4, cps: 16 },
+    { de: 'el', texto: 'Esa sí ✅', t: 13.6, pensar: 0.9 },
+    { de: 'yo', texto: 'Algo es algo 🥲', t: 15.4, cps: 14 },
+  ],
+  cierre: { tipo: 'camiseta', diseno: '02-esto-desgrava', titulo: 'Camiseta «¿Esto desgrava?»', t: 17.6 },
+});
+</script></body></html>

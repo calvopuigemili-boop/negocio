@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+#pantalla{background:#fff}
+.barra{position:absolute;top:44px;left:0;right:0;height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;color:#e3a008;font-size:17px}
+.barra .izq{display:flex;align-items:center;gap:2px}.barra .izq b{font-size:30px;font-weight:400;margin-top:-4px}
+.barra .der{display:flex;gap:20px;align-items:center;font-weight:600}
+.nota{position:absolute;top:96px;left:18px;right:18px;color:#111}
+.nota .fecha{text-align:center;color:#8e8e93;font-size:12.5px;margin-bottom:12px}
+.nota h1{font-size:27px;font-weight:700;margin:0 0 6px;min-height:34px}
+.nota .cuerpo{font-size:17.5px;line-height:1.55}
+.cur{display:inline-block;width:2px;height:21px;background:#e3a008;vertical-align:-4px;margin-left:1px}
+h1 .cur{height:30px}
+</style></head>
+<body><div id="pantalla">
+  <div class="barra"><span class="izq"><b>‹</b> Notas</span><span class="der">
+    <svg width="18" height="22" viewBox="0 0 18 22"><path d="M9 1v13M4.5 5.5 9 1l4.5 4.5M3 9H1.5v11.5h15V9H15" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    <span>OK</span></span></div>
+  <div class="nota"><div class="fecha">14 de octubre de 2026, 23:47</div><h1></h1><div class="cuerpo"></div></div>
+</div>
+<script src="base.js"></script>
+<script>
+document.querySelector('#pantalla').insertAdjacentHTML('afterbegin', barraEstado());
+const TITULO = 'Horario de autónomo 🫠';
+const LINEAS = ['Lunes: trabajo', 'Martes: trabajo', 'Miércoles: trabajo', 'Jueves: trabajo', 'Viernes: trabajo',
+                'Sábado: «solo un ratito» (6 h)', 'Domingo: «solo un email» (4 h)', 'Vacaciones: ver sábado'];
+const TEXTO = TITULO + '\n' + LINEAS.join('\n');
+// Tiempos de escritura, con pausas al cambiar de línea
+const cs = Array.from(TEXTO); const ts = []; let tt = 1.3;
+cs.forEach((c, i) => {
+  const r = Math.abs(Math.sin(i * 12.9898) * 43758.5453) % 1;
+  tt += c === '\n' ? 0.45 : (1 / 19) * (0.6 + r * 0.9);
+  ts.push(tt);
+});
+cs.forEach((c, i) => { if (c !== '\n') sonido(ts[i] - 0.07, 'tecla'); });
+const FIN = ts[ts.length - 1];
+const pant = document.querySelector('#pantalla');
+const tec = crearTeclado(pant);
+const h1 = document.querySelector('h1'), cuerpo = document.querySelector('.cuerpo');
+const rot = rotulo('Me hice autónomo para tener libertad de horario', 1030);
+const T_CIERRE = FIN + 1.6;
+const cierre = crearCierre('camiseta', '05-de-lunes-a-lunes', 'Camiseta «De lunes a lunes»', T_CIERRE);
+window.DURATION = T_CIERRE + 3.4;
+window.render = t => {
+  const n = ts.filter(x => x <= t).length;
+  const escrito = cs.slice(0, n).join('');
+  const [tit, ...resto] = escrito.split('\n');
+  const parpadeo = (Math.floor(t * 2) % 2 === 0 || (t > 1.2 && t < FIN)) ? '<span class="cur"></span>' : '';
+  h1.innerHTML = tit + (resto.length ? '' : parpadeo);
+  cuerpo.innerHTML = resto.length ? resto.map(l => l || '&nbsp;').join('<br>') + parpadeo : '';
+  const kv = Math.min(easeOut(prog(t, 0.6, 0.35)), 1 - easeOut(prog(t, FIN + 0.5, 0.35)));
+  tec.nodo.style.transform = `translateY(${(1 - kv) * 262}px)`;
+  let tecla = null;
+  for (let i = 0; i < ts.length; i++) if (t >= ts[i] - 0.07 && t < ts[i] && cs[i] !== '\n') tecla = cs[i];
+  tec.pulsar(tecla);
+  animarRotulo(rot, t, 0.2, T_CIERRE - 0.2);
+  animarCierre(cierre, t, T_CIERRE);
+};
+render(0);
+</script></body></html>

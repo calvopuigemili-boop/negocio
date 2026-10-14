@@ -1,0 +1,89 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+#pantalla{background:#fff;font-size:12.5px;color:#202124}
+.app{position:absolute;top:44px;left:0;right:0;height:46px;display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid #e0e0e0}
+.app .ico{width:22px;height:28px;background:#1e8e3e;border-radius:3px;position:relative}
+.app .ico::after{content:"";position:absolute;inset:7px 5px;border:1.5px solid #fff;border-radius:1px}
+.app .nom{font-size:15px;font-weight:500}
+.fx{position:absolute;top:90px;left:0;right:0;height:34px;display:flex;align-items:center;border-bottom:1px solid #e0e0e0;font-size:13px}
+.fx .ref{width:52px;text-align:center;color:#5f6368;border-right:1px solid #e0e0e0;height:100%;display:flex;align-items:center;justify-content:center}
+.fx .f{padding:0 10px;color:#5f6368;font-style:italic}.fx .v{padding-left:4px}
+table{position:absolute;top:124px;left:0;border-collapse:collapse;table-layout:fixed}
+td{border:1px solid #e2e2e2;height:30px;padding:0 6px;white-space:nowrap;overflow:hidden;text-align:right;font-variant-numeric:tabular-nums}
+td.l{text-align:left}
+tr.cab td{background:#f8f9fa;color:#5f6368;text-align:center;height:22px;font-size:11.5px}
+td.num{background:#f8f9fa;color:#5f6368;text-align:center;width:26px}
+tr.tit td{font-weight:700;background:#e6f4ea}
+td.sel{outline:2.5px solid #1a73e8;outline-offset:-2px}
+td.flash{background:#fff5c2}
+.pest{position:absolute;bottom:0;left:0;right:0;height:46px;background:#f8f9fa;border-top:1px solid #e0e0e0;display:flex;align-items:center;gap:4px;padding:0 10px;font-size:13.5px}
+.pest span{padding:8px 12px;border-radius:6px;color:#5f6368}
+.pest span.on{background:#e6f4ea;color:#137333;font-weight:600}
+.res{position:absolute;top:124px;left:0;right:0;bottom:46px;background:#fff;padding:18px 16px;opacity:0}
+.res h2{font-size:19px;margin:0 0 14px}
+.fila{display:flex;justify-content:space-between;padding:11px 12px;border-bottom:1px solid #eee;font-size:15.5px;font-variant-numeric:tabular-nums}
+.fila.gr{background:#e6f4ea;border-radius:8px;border:none;margin-top:4px;font-weight:700}
+.fila.tot{background:#151515;color:#fff;border-radius:8px;margin-top:10px;font-weight:700;font-size:17px}
+</style></head>
+<body><div id="pantalla">
+  <div class="app"><span class="ico"></span><span class="nom">Kit Autónomo 2027</span></div>
+  <div class="fx"><span class="ref">A6</span><span class="f">fx</span><span class="v"></span></div>
+  <table>
+    <tr class="cab"><td class="num"></td><td style="width:50px">A</td><td style="width:108px">B</td><td style="width:70px">C</td><td style="width:56px">D</td><td style="width:56px">E</td></tr>
+    <tr class="tit"><td class="num">1</td><td class="l">Fecha</td><td class="l">Cliente</td><td>Base</td><td>IVA</td><td>IRPF</td></tr>
+    <tr><td class="num">2</td><td class="l">08/01</td><td class="l">Agencia Mar</td><td>800,00</td><td>168,00</td><td>120,00</td></tr>
+    <tr><td class="num">3</td><td class="l">10/01</td><td class="l">Taller Sur</td><td>1.500,00</td><td>315,00</td><td>225,00</td></tr>
+    <tr><td class="num">4</td><td class="l">12/01</td><td class="l">Ana P.</td><td>400,00</td><td>84,00</td><td>0,00</td></tr>
+    <tr id="nueva"><td class="num">5</td><td class="l"></td><td class="l"></td><td></td><td></td><td></td></tr>
+    <tr><td class="num">6</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="num">7</td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="num">8</td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="res"><h2>Primer trimestre</h2>
+    <div class="fila"><span>Ingresos</span><b data-v="3900">0</b></div>
+    <div class="fila"><span>Gastos</span><b data-v="600">0</b></div>
+    <div class="fila gr"><span>IVA a pagar (303)</span><b data-v="693">0</b></div>
+    <div class="fila gr"><span>IRPF a pagar (130)</span><b data-v="135">0</b></div>
+    <div class="fila tot"><span>Total del trimestre</span><b data-v="828">0</b></div></div>
+  <div class="pest"><span class="on" id="p1">Ingresos</span><span>Gastos</span><span id="p2">Trimestres</span><span>Factura</span></div>
+</div>
+<script src="base.js"></script>
+<script>
+document.querySelector('#pantalla').insertAdjacentHTML('afterbegin', barraEstado());
+const celdas = [...document.querySelectorAll('#nueva td')].slice(1);
+const ENTRADAS = [ // celda, texto, termina de escribir en t
+  { i: 0, txt: '15/01', t: 2.2 }, { i: 1, txt: 'Estudio Norte', t: 4.0 }, { i: 2, txt: '1200', t: 5.4 }];
+ENTRADAS.forEach(e => { e.ts = escrituraHasta(e.txt, e.t, 11); sonidosTeclas(e.ts); });
+const T_AUTO = 5.7; sonido(T_AUTO, 'pop');
+const T_PEST = 7.4; sonido(T_PEST, 'tic'); sonido(T_PEST + 0.1, 'swoosh');
+const res = document.querySelector('.res'), vals = [...res.querySelectorAll('b')], filas = [...res.querySelectorAll('.fila')];
+filas.forEach((f, i) => { for (let k = 0; k < 10; k++) sonido(T_PEST + 0.6 + i * 0.7 + k * 0.05, 'tic'); });
+sonido(T_PEST + 0.6 + 4 * 0.7 + 0.6, 'caja');
+const fxv = document.querySelector('.fx .v'), ref = document.querySelector('.fx .ref');
+const rot = rotulo('Así llevo mis impuestos sin pagar 20 €/mes de programa', 1240);
+const T_CIERRE = 14.2;
+const cierre = crearCierre('kit', null, 'Kit Autónomo: pago único de 9 €', T_CIERRE);
+window.DURATION = 17.5;
+const LET = 'BCD';
+window.render = t => {
+  celdas.forEach(c => c.classList.remove('sel', 'flash'));
+  let activa = 0, txt = '';
+  ENTRADAS.forEach(e => {
+    const s = escritoHasta(e.txt, e.ts, t);
+    celdas[e.i].textContent = e.i === 2 && t >= e.t + 0.2 ? '1.200,00' : s;
+    if (t >= e.ts[0] - 0.4) { activa = e.i; txt = s; }
+  });
+  if (t < T_PEST) { celdas[activa].classList.add('sel'); ref.textContent = LET[activa] + '5'; fxv.textContent = txt; }
+  const auto = t >= T_AUTO;
+  celdas[3].textContent = auto ? '252,00' : ''; celdas[4].textContent = auto ? '180,00' : '';
+  if (auto && t < T_AUTO + 0.6) { celdas[3].classList.add('flash'); celdas[4].classList.add('flash'); }
+  const r = easeOut(prog(t, T_PEST + 0.1, 0.35));
+  res.style.opacity = r; res.style.transform = `translateX(${(1 - r) * 40}px)`;
+  document.getElementById('p1').className = t >= T_PEST ? '' : 'on';
+  document.getElementById('p2').className = t >= T_PEST ? 'on' : '';
+  vals.forEach((v, i) => { v.textContent = euros(Math.round(+v.dataset.v * easeOut(prog(t, T_PEST + 0.6 + i * 0.7, 0.55)))); });
+  animarRotulo(rot, t, 0.2, T_CIERRE - 0.2);
+  animarCierre(cierre, t, T_CIERRE);
+};
+render(0);
+</script></body></html>

@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+#pantalla{background:radial-gradient(circle at 20% 15%,#ff9a62 0,transparent 45%),radial-gradient(circle at 85% 40%,#7b5cff 0,transparent 50%),radial-gradient(circle at 30% 85%,#1fb5a6 0,transparent 50%),#22223a;color:#fff}
+.fecha{position:absolute;top:70px;left:0;right:0;text-align:center;font-size:19px;font-weight:600;opacity:.9}
+.hora{position:absolute;top:92px;left:0;right:0;text-align:center;font-size:96px;font-weight:600;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.notis{position:absolute;top:240px;left:10px;right:10px;display:flex;flex-direction:column;gap:8px}
+.noti{background:rgba(245,245,250,.72);backdrop-filter:blur(20px);color:#111;border-radius:20px;padding:11px 13px;display:flex;gap:11px;align-items:flex-start}
+.noti .ap{flex:none;width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.noti .c{flex:1;font-size:14.5px;line-height:1.3}
+.noti .c b{display:flex;justify-content:space-between;font-weight:600}
+.noti .c b small{font-weight:400;color:#555;font-size:12.5px}
+.abajo{position:absolute;bottom:26px;left:46px;right:46px;display:flex;justify-content:space-between}
+.abajo i{width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.3);display:block}
+</style></head>
+<body><div id="pantalla"><div class="fecha">martes, 20 de abril</div><div class="hora">8:59</div><div class="notis"></div>
+<div class="abajo"><i></i><i></i></div></div>
+<script src="base.js"></script>
+<script>
+document.querySelector('#pantalla').insertAdjacentHTML('afterbegin', barraEstado('#fff', ''));
+const NOTIS = [
+  { t: 1.6, ap: '📅', fondo: '#fff', nom: 'Calendario', txt: '⚠️ HOY último día: IVA e IRPF del primer trimestre' },
+  { t: 3.6, ap: '🏦', fondo: '#1f4f7a', nom: 'Banco', txt: 'Cargo domiciliado: impuestos 1T −1.750,00 €' },
+  { t: 5.6, ap: '💬', fondo: '#25a85a', nom: 'Cliente ⭐', txt: 'Oye, ¿me reenvías la factura de enero? No la encuentro 🙏' },
+  { t: 7.6, ap: '💬', fondo: '#25a85a', nom: 'Mi gestor', txt: 'Me faltan los tickets de marzo. ¿Me los pasas hoy?' },
+  { t: 9.6, ap: '💬', fondo: '#25a85a', nom: 'Mamá', txt: '¿Vienes a comer el domingo o también trabajas? 😒' },
+];
+const caja = document.querySelector('.notis');
+NOTIS.forEach(n => {
+  n.nodo = el('div', 'noti', `<div class="ap" style="background:${n.fondo}">${n.ap}</div><div class="c"><b>${n.nom}<small>ahora</small></b>${n.txt}</div>`);
+  caja.prepend(n.nodo);
+  sonido(n.t, 'ding');
+});
+NOTIS.forEach(n => { n.h = n.nodo.offsetHeight + 8; });
+const hora = document.querySelector('.hora');
+const rot = rotulo('Día 20 siendo autónomo:', 560);
+const T_CIERRE = 12.2;
+const cierre = crearCierre('camiseta', '03-sobrevivi-al-trimestre', 'Camiseta «Sobreviví al trimestre»', T_CIERRE);
+window.DURATION = 15.5;
+window.render = t => {
+  hora.textContent = t < 6 ? '8:59' : '9:00';
+  NOTIS.forEach(n => {
+    const p = easeBack(prog(t, n.t, 0.45));
+    const vis = t >= n.t;
+    n.nodo.style.display = vis ? 'flex' : 'none';
+    n.nodo.style.opacity = prog(t, n.t, 0.15);
+    n.nodo.style.transform = `translateY(${(1 - p) * -40}px) scale(${0.94 + 0.06 * p})`;
+  });
+  const tiembla = NOTIS.some(n => t >= n.t && t < n.t + 0.25) ? Math.sin(t * 90) * 1.2 : 0;
+  document.querySelector('#pantalla').style.transform = `scale(2.7692) translateX(${tiembla}px)`;
+  animarRotulo(rot, t, 0.2, T_CIERRE - 0.2);
+  animarCierre(cierre, t, T_CIERRE);
+};
+render(0);
+</script></body></html>

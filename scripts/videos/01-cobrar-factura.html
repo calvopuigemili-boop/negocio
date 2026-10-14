@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"></head>
+<body><div id="pantalla"></div>
+<script src="base.js"></script><script src="chat.js"></script>
+<script>
+montarChat({
+  contacto: 'Cliente ⭐', iniciales: 'CL', colorAvatar: '#7b8ea0',
+  rotulo: { texto: 'Intentar cobrar una factura siendo autónomo:', t0: 0.15, t1: 16.3 },
+  duracion: 20,
+  mensajes: [
+    { fecha: '14 de octubre', t: 0.05 },
+    { de: 'yo', texto: '¡Hola! Te paso la factura del proyecto 😊', t: 3.0 },
+    { de: 'yo', pdf: 'Factura_2026-041.pdf', t: 3.45 },
+    { de: 'el', texto: '¡Perfecto! Esta semana te la pago 👍', t: 4.9 },
+    { fecha: '13 de noviembre', t: 5.9 },
+    { de: 'yo', texto: '¿Pudiste mirar lo de la factura?', t: 8.3 },
+    { de: 'el', texto: 'Sí sí, se la he pasado a contabilidad 🙏', t: 9.6 },
+    { fecha: '12 de diciembre', t: 10.5 },
+    { de: 'yo', texto: 'Buenas, te escribo por la factura 😅', t: 12.9 },
+    { de: 'el', texto: 'Uy, ¿qué factura?', t: 14.0 },
+    { fecha: '11 de enero', t: 14.8 },
+    { de: 'el', texto: 'Oye, ¿me la reenvías? Es que no la encuentro', t: 16.0, pensar: 0.9 },
+  ],
+  cierre: { tipo: 'camiseta', diseno: '06-pago-a-90-dias', titulo: 'Camiseta «Pago a 90 días»', t: 17.2 },
+});
+</script></body></html>
