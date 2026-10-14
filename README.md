@@ -1,5 +1,7 @@
 # Kit Autónomo — negocio de producto digital con inversión 0 €
 
+> 👉 **Empieza por [EMPIEZA-AQUI.md](EMPIEZA-AQUI.md)**: plan adaptado (Payhip + PayPal, 10 min/día).
+
 Plantilla de hoja de cálculo para autónomos españoles (facturas, gastos, Modelo 303 y Modelo 130)
 que se vende en Gumroad a 9 €. Análisis completo en [ANALISIS.md](ANALISIS.md).
 
@@ -24,7 +26,9 @@ que se vende en Gumroad a 9 €. Análisis completo en [ANALISIS.md](ANALISIS.md
 
 ---
 
-# Negocio 2: tienda Shopify «Huella & Co.» (mascotas, 0 € de inversión)
+# Negocio 2 (descartado por ahora): tienda Shopify «Huella & Co.»
+
+> No encaja con el objetivo de bajo mantenimiento (pedidos, devoluciones, vídeos diarios). Se conserva como referencia.
 
 Todo en [`tienda-mascotas/`](tienda-mascotas/):
 
