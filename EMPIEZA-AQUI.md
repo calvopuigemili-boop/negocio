@@ -31,7 +31,7 @@ devoluciones y vídeos diarios. No es pasiva.
 5. Copia título y descripción de `marketing/ficha-gumroad.md` (sirve tal cual para Payhip).
    Precio: **9 €**.
 6. Publica y copia tu enlace (algo como `payhip.com/b/XXXX`).
-7. Mándame el enlace y yo lo pongo en la web de venta (`docs/index.html`) y en los posts.
+7. ✅ Hecho: tienda en https://payhip.com/b/OPcw6 (enlace ya puesto en la web y en los posts).
 
 ## Paso 2 — Traer compradores (10 min al día, las 2 primeras semanas)
 

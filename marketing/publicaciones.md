@@ -1,6 +1,6 @@
 # Publicaciones listas para usar
 
-Sustituye `[ENLACE]` por tu enlace de Gumroad o de la web (GitHub Pages).
+Enlace de compra: https://payhip.com/b/OPcw6
 Regla de oro: en foros y Reddit, aporta valor primero; enlaza solo si las normas lo permiten.
 
 ---
@@ -14,11 +14,11 @@ Regla de oro: en foros y Reddit, aporta valor primero; enlaza solo si las normas
 > • 303 = IVA de tus facturas − IVA de tus gastos
 > • 130 = 20 % de (ingresos − gastos acumulados en el año) − retenciones − pagos anteriores
 >
-> Yo lo tengo automatizado en una hoja de cálculo. Si la quieres: [ENLACE]
+> Yo lo tengo automatizado en una hoja de cálculo. Si la quieres: https://payhip.com/b/OPcw6
 
 **Post 2 — dolor**
 > Pagar 20 €/mes por un programa de facturación cuando emites 4 facturas al mes no tiene sentido.
-> Hice una plantilla que hace lo mismo (facturas + IVA + IRPF trimestral) por un pago único de 9 €. [ENLACE]
+> Hice una plantilla que hace lo mismo (facturas + IVA + IRPF trimestral) por un pago único de 9 €. https://payhip.com/b/OPcw6
 
 **Post 3 — consejo**
 > El error n.º 1 del autónomo novato: gastarse el IVA que cobra.
@@ -37,14 +37,14 @@ Regla de oro: en foros y Reddit, aporta valor primero; enlaza solo si las normas
 **Título:** He hecho una hoja para calcular el 303 y el 130 sin volverme loco, os explico la lógica
 
 > Cuerpo: explica las fórmulas (como en el Post 1), un ejemplo con números y ofrece la plantilla
-> al final («si alguien la quiere, la tengo en [ENLACE]»). Lee antes las normas de autopromoción
+> al final («si alguien la quiere, la tengo en https://payhip.com/b/OPcw6»). Lee antes las normas de autopromoción
 > de cada subreddit.
 
 ## Grupos de Facebook / Telegram / WhatsApp de autónomos y freelancers
 
 > Hola, comparto algo que me está ayudando este trimestre: una hoja donde apuntas facturas y
 > gastos y te calcula sola el 303 y el 130, y te genera la factura en PDF. Pago único, 9 €.
-> Si a alguien le sirve: [ENLACE]. Y si tenéis dudas con el 130, preguntad, que encantado.
+> Si a alguien le sirve: https://payhip.com/b/OPcw6. Y si tenéis dudas con el 130, preguntad, que encantado.
 
 ## Mensaje directo (a conocidos autónomos — la vía más rápida a la primera venta)
 
