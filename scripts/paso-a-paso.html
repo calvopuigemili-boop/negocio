@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Paso a paso · Modo Autónomo</title>
+<style>
+@font-face { font-family:"TT"; src:url(videos/fuentes/TikTokSans-400.ttf); font-weight:400; }
+@font-face { font-family:"TT"; src:url(videos/fuentes/TikTokSans-700.ttf); font-weight:700; }
+@font-face { font-family:"TT"; src:url(videos/fuentes/TikTokSans-800.ttf); font-weight:800; }
+@font-face { font-family:"UI"; src:url(videos/fuentes/Inter-400.ttf); font-weight:400; }
+@font-face { font-family:"UI"; src:url(videos/fuentes/Inter-600.ttf); font-weight:600; }
+@page { size:A4; margin:16mm 15mm 16mm; }
+* { box-sizing:border-box; }
+body { font-family:"UI"; color:#1b1b1f; font-size:10.5pt; line-height:1.5; margin:0; }
+h1, h2, h3 { font-family:"TT"; margin:0; }
+.portada { display:flex; align-items:center; gap:18px; padding-bottom:14px; border-bottom:3px solid #1d2733; margin-bottom:16px; }
+.portada img { width:70px; border-radius:14px; }
+.portada h1 { font-size:24pt; font-weight:800; line-height:1.1; }
+.portada p { margin:4px 0 0; color:#5b5f66; }
+.resumen { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-bottom:18px; }
+.resumen div { background:#f3efe8; border-radius:10px; padding:10px; font-size:9pt; }
+.resumen b { display:block; font-family:"TT"; font-size:15pt; color:#e8590c; }
+.fase { font-family:"TT"; font-weight:800; font-size:15pt; background:#1d2733; color:#fff; padding:8px 14px; border-radius:10px; margin:20px 0 12px; display:flex; justify-content:space-between; }
+.fase span { color:#ffb000; font-size:11pt; font-weight:700; align-self:center; }
+.paso { border:1.5px solid #e2ddd4; border-radius:12px; padding:12px 14px 8px; margin-bottom:11px; break-inside:avoid; }
+.paso h3 { font-size:12.5pt; font-weight:800; display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+.paso h3 .t { font-family:"UI"; font-weight:600; font-size:9pt; color:#fff; background:#e8590c; padding:2px 9px; border-radius:20px; }
+.paso h3 .n { color:#e8590c; margin-right:6px; }
+ul.check { list-style:none; padding:0; margin:0; }
+ul.check li { position:relative; padding-left:24px; margin-bottom:5px; }
+ul.check li::before { content:""; position:absolute; left:0; top:2px; width:13px; height:13px; border:1.6px solid #1d2733; border-radius:3px; }
+ul.check li.hecho::before { background:#2e9d5b; border-color:#2e9d5b; }
+ul.check li.hecho::after { content:"✓"; position:absolute; left:2.5px; top:-1px; color:#fff; font-size:10pt; font-weight:700; }
+code, .url { font-family:"UI"; font-weight:600; background:#f3efe8; padding:1px 5px; border-radius:4px; font-size:9.5pt; word-break:break-all; }
+.copiar { background:#f3efe8; border-left:4px solid #e8590c; padding:7px 10px; margin:6px 0 6px 24px; border-radius:0 6px 6px 0; font-size:9.5pt; white-space:pre-line; }
+.nota { font-size:9pt; color:#5b5f66; margin:4px 0 4px 24px; }
+table { width:100%; border-collapse:collapse; font-size:9.5pt; margin-top:4px; }
+th, td { text-align:left; padding:6px 8px; border-bottom:1px solid #e2ddd4; vertical-align:top; }
+th { color:#5b5f66; font-weight:600; }
+.caja { background:#fff4ec; border:1.5px solid #e8590c; border-radius:12px; padding:12px 14px; margin-top:12px; break-inside:avoid; }
+.caja h3 { font-size:12pt; margin-bottom:6px; }
+.nunca { background:#eaf6ef; border:1.5px solid #2e9d5b; border-radius:12px; padding:10px 14px; margin-top:12px; font-weight:600; break-inside:avoid; }
+.salto { break-before:page; }
+</style>
+</head>
+<body>
+
+<div class="portada">
+  <img src="../tienda-camisetas/marca/logo.png" alt="">
+  <div><h1>Tu paso a paso completo</h1>
+  <p>Todo lo que tienes que hacer tú, en orden. Marca cada casilla al terminarla.<br>
+  Si algo no te sale igual que aquí, mándame una captura de pantalla.</p></div>
+</div>
+
+<div class="resumen">
+  <div><b>✓ Hecho</b>Tienda Payhip con el Kit</div>
+  <div><b>6 guías</b>Web para Google</div>
+  <div><b>10 diseños</b>Camisetas y tazas</div>
+  <div><b>8 vídeos</b>Listos para TikTok</div>
+</div>
+
+<div class="fase">FASE 1 · Montarlo todo <span>Un fin de semana · ≈ 1 h 30 min</span></div>
+
+<div class="paso">
+  <h3><span><span class="n">1</span>Comprobar Payhip</span><span class="t">2 min</span></h3>
+  <ul class="check">
+    <li class="hecho">Tienda creada: <span class="url">https://payhip.com/b/OPcw6</span></li>
+    <li>Abre ese enlace en una <b>ventana de incógnito</b>. Debe salir el Kit a 9 € con el botón de comprar.</li>
+    <li>En Payhip: <b>Settings → Payment Settings</b>. PayPal debe aparecer <b>conectado</b>.</li>
+    <li>En Payhip: <b>Settings → Taxes</b>. Activa <b>EU VAT</b>.</li>
+  </ul>
+</div>
+
+<div class="paso">
+  <h3><span><span class="n">2</span>Activar tu web</span><span class="t">2 min</span></h3>
+  <ul class="check">
+    <li>Entra en <b>github.com</b> → tu repositorio <b>negocio</b> → <b>Settings</b> (arriba) → <b>Pages</b> (menú de la izquierda).</li>
+    <li>En <b>Branch</b> elige <code>claude/vigilant-curie-2gaaub</code> y al lado la carpeta <code>/docs</code> → <b>Save</b>.</li>
+    <li>Espera 5 minutos y abre <span class="url">https://calvopuigemili-boop.github.io/negocio/</span>. Debe salir la web del Kit.</li>
+  </ul>
+</div>
+
+<div class="paso">
+  <h3><span><span class="n">3</span>Tienda de camisetas en Spreadshop</span><span class="t">10 min + 5 min por diseño</span></h3>
+  <ul class="check">
+    <li>Entra en <b>spreadshop.es</b> → <b>Crear tienda gratis</b> → regístrate con tu email.</li>
+    <li>Nombre: <b>Modo Autónomo</b>. Dirección: <code>modoautonomo</code> (si está cogida: <code>modoautonomoes</code>).</li>
+    <li><b>Ajustes de pago</b>: elige <b>PayPal</b> y escribe tu email de PayPal.</li>
+    <li><b>Diseño de la tienda</b>: logo = <code>tienda-camisetas/marca/logo.png</code> · cabecera = <code>tienda-camisetas/marca/banner.png</code>.</li>
+    <li>Sube los 10 diseños de la carpeta <code>tienda-camisetas/disenos/</code> (tabla en la página siguiente). Puedes hacer 2 o 3 al día.</li>
+    <li>En cada diseño activa <b>«Publicar en el Marketplace de Spreadshirt»</b>.</li>
+    <li><b>Mándame la dirección de tu tienda</b> y la pongo en tu web y en tu TikTok.</li>
+  </ul>
+</div>
+
+<div class="paso">
+  <h3><span><span class="n">4</span>Cuenta de TikTok</span><span class="t">10 min</span></h3>
+  <ul class="check">
+    <li>Descarga TikTok y regístrate con tu <b>email</b>.</li>
+    <li>Usuario <code>modoautonomo</code> (si está cogido, dime cuál pusiste). Nombre: <b>Modo Autónomo</b>.</li>
+    <li>Foto de perfil: <code>tienda-camisetas/marca/logo.png</code>.</li>
+    <li>Biografía (copiar y pegar):</li>
+  </ul>
+  <div class="copiar">Humor y trucos para autónomos 🇪🇸
+Camisetas, tazas y plantilla de IVA/IRPF 👇</div>
+  <ul class="check">
+    <li><b>Perfil → ☰ → Ajustes y privacidad → Cuenta → Cambiar a cuenta de empresa</b> (gratis).</li>
+    <li><b>Editar perfil → Sitio web</b>: <span class="url">https://calvopuigemili-boop.github.io/negocio/enlaces.html</span></li>
+    <li><b>Ajustes → Privacidad → Mensajes directos → Nadie</b>. Así nadie te escribe.</li>
+  </ul>
+</div>
+
+<div class="paso">
+  <h3><span><span class="n">5</span>Programar los 8 vídeos</span><span class="t">20 min</span></h3>
+  <ul class="check">
+    <li>Descarga los vídeos (te los mandé por el chat; también están en la carpeta <code>tiktok/</code> de GitHub).</li>
+    <li>En el ordenador, entra en <span class="url">tiktok.com/tiktokstudio/upload</span>.</li>
+    <li>Sube el vídeo, pega su texto (tabla de la página siguiente), pulsa <b>Programar</b> y elige día y hora (entre las <b>19:00 y las 22:00</b>).</li>
+    <li>Repite con los demás: uno cada 1-2 días. Ya llevan sonido; no hace falta añadir música.</li>
+  </ul>
+</div>
+
+<div class="paso">
+  <h3><span><span class="n">6</span>Avisar a Google <span style="font-weight:400;color:#5b5f66">(opcional)</span></span><span class="t">10 min</span></h3>
+  <ul class="check">
+    <li>Entra en <b>search.google.com/search-console</b> → <b>Añadir propiedad</b> → <b>Prefijo de la URL</b> → pega <span class="url">https://calvopuigemili-boop.github.io/negocio/</span></li>
+    <li>Elige verificar con <b>Etiqueta HTML</b>, copia el código y <b>mándamelo</b>. Yo lo pongo en la web.</li>
+    <li>Cuando esté verificada: <b>Sitemaps</b> → escribe <code>sitemap.xml</code> → <b>Enviar</b>.</li>
+  </ul>
+</div>
+
+<div class="salto"></div>
+
+<div class="fase">Para copiar y pegar · Spreadshop <span>Paso 3</span></div>
+<p style="margin:0 0 6px">Sube el PNG <b>-oscuro</b> para prendas claras y tazas, y el <b>-claro</b> para prendas negras o azul marino. Productos: camiseta unisex, camiseta de mujer, sudadera y taza. Margen: <b>5 €</b> camisetas, <b>7 €</b> sudaderas, <b>4 €</b> tazas.</p>
+<p style="margin:0 0 4px"><b>Etiquetas para todos:</b> autónomo, autónomos, freelance, emprendedor, regalo autónomo, humor, regalo original, oficina</p>
+<table>
+  <tr><th>Archivo</th><th>Título</th><th>Etiquetas extra</th></tr>
+  <tr><td>01-autonomo-todo-en-uno</td><td>Autónomo: jefe, contable, becario y el que limpia</td><td>jefe, contable, multitarea, trabajo</td></tr>
+  <tr><td>02-esto-desgrava</td><td>¿Esto desgrava?</td><td>desgravar, gastos deducibles, hacienda, gestor</td></tr>
+  <tr><td>03-sobrevivi-al-trimestre</td><td>Sobreviví al trimestre (1T 2T 3T 4T)</td><td>iva, trimestre, impuestos, modelo 303</td></tr>
+  <tr><td>04-mi-jefe-es-un-explotador</td><td>Mi jefe es un explotador (soy autónomo)</td><td>jefe, explotador, chiste, trabajo</td></tr>
+  <tr><td>05-de-lunes-a-lunes</td><td>Horario de autónomo: de lunes a lunes</td><td>horario, lunes, trabajo, fin de semana</td></tr>
+  <tr><td>06-pago-a-90-dias</td><td>Pago a 90 días… y luego ya veremos</td><td>factura, cobrar, clientes, morosos</td></tr>
+  <tr><td>07-hacienda-me-quiere</td><td>Hacienda me quiere</td><td>hacienda, impuestos, iva, irpf</td></tr>
+  <tr><td>08-funciono-con-cafe</td><td>Funciono con café al 21 %</td><td>café, cafeína, iva, taza café</td></tr>
+  <tr><td>09-nunca-de-baja</td><td>Nunca de baja, siempre de alta</td><td>baja, alta, seguridad social, cuota</td></tr>
+  <tr><td>10-vacaciones-de-autonomo</td><td>Vacaciones de autónomo: lo mismo pero con arena</td><td>vacaciones, playa, portátil, verano</td></tr>
+</table>
+<p class="nota" style="margin-left:0">Descripción para todos: «Para los que son su propio jefe, su propio contable y su propio becario. Regalo perfecto para autónomos, freelancers y emprendedores. Impreso bajo pedido en Europa.»</p>
+
+<div class="fase">Para copiar y pegar · TikTok <span>Paso 5 · en este orden</span></div>
+<table>
+  <tr><th>#</th><th>Vídeo (carpeta)</th><th>Texto de la publicación</th></tr>
+  <tr><td>1</td><td>01-cobrar-factura</td><td>El cliente siempre paga… algún día 🙃 ¿Te ha pasado?<br>#autonomos #autonomo #freelance #humorautonomos #facturas #emprendedores</td></tr>
+  <tr><td>2</td><td>04-saldo-real</td><td>El error que más sustos da al autónomo: gastarse el IVA 😬 (ejemplo orientativo)<br>#autonomos #iva #irpf #finanzaspersonales #hacienda #freelance</td></tr>
+  <tr><td>3</td><td>02-que-desgrava</td><td>Spoiler: casi nada de lo divertido desgrava 🥲 (la cuota sí)<br>#autonomos #gestoria #hacienda #humorautonomos #freelance #desgravar</td></tr>
+  <tr><td>4</td><td>05-modelo-130</td><td>Guárdalo para el próximo trimestre 📌 Info orientativa: cada caso es distinto.<br>#autonomos #modelo130 #irpf #hacienda #freelance #impuestos</td></tr>
+  <tr><td>5</td><td>03-horario-autonomo</td><td>Libertad de horario, decían 🫠<br>#autonomos #emprendedores #freelance #humorautonomos #trabajo #españa</td></tr>
+  <tr><td>6</td><td>06-hoja-impuestos</td><td>Pago único, sin cuotas. Link en el perfil 👆<br>#autonomos #excel #plantillaexcel #iva #irpf #freelance</td></tr>
+  <tr><td>7</td><td>08-regalo-autonomo</td><td><b>Finales de noviembre o diciembre.</b> Para ese amigo que siempre pregunta si algo desgrava 🎁<br>#regalo #regalooriginal #autonomos #regalosnavidad #humorautonomos #camisetas</td></tr>
+  <tr><td>8</td><td>07-dia-20</td><td><b>Un día 20 de abril, julio u octubre, o un 30 de enero.</b> Feliz día 20 a quien le toque 🫡<br>#autonomos #hacienda #iva #humorautonomos #freelance #trimestre</td></tr>
+</table>
+
+<div class="fase">FASE 2 · Mantenimiento <span>Minutos al mes</span></div>
+<table>
+  <tr><th>Cuándo</th><th>Qué</th><th>Tiempo</th></tr>
+  <tr><td>Cuando se acaben los vídeos</td><td>Pídeme una tanda nueva y prográmala</td><td>20 min</td></tr>
+  <tr><td>Una vez al mes</td><td>Mira ventas en Payhip y Spreadshop y visitas en TikTok. Cuéntamelo para mejorar</td><td>5 min</td></tr>
+  <tr><td>Antes de mediados de noviembre</td><td>Pídeme diseños de Navidad y súbelos a Spreadshop</td><td>30 min</td></tr>
+  <tr><td>Diciembre</td><td>Pídeme el Kit del año siguiente y súbelo a Payhip (<b>Edit product → Update file</b>)</td><td>5 min</td></tr>
+</table>
+
+<div class="nunca">Nunca tienes que: contestar mensajes, atender clientes, enviar paquetes ni salir en vídeo.</div>
+
+<div class="caja">
+  <h3>Lo que tienes que mandarme</h3>
+  <ul class="check">
+    <li>La dirección de tu tienda de Spreadshop.</li>
+    <li>Tu usuario de TikTok, si no es <code>modoautonomo</code>.</li>
+    <li>(Opcional) El código de verificación de Google Search Console.</li>
+  </ul>
+</div>
+
+<p class="nota" style="margin:14px 0 0"><b>Hacienda:</b> lo que ganes en Payhip y Spreadshop es un ingreso y se declara en la renta. Si las ventas se vuelven habituales, consulta a un asesor por el alta de autónomo.</p>
+
+</body>
+</html>
