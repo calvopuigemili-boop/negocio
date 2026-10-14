@@ -40,3 +40,11 @@ Todo en [`tienda-mascotas/`](tienda-mascotas/):
 | `4-CHECKLIST-TIENDA.md` | Qué está hecho en Shopify y qué te falta (≈1 hora) |
 | `5-POLITICAS-LEGALES.md` | Textos legales para pegar en Shopify |
 | `logo-huella.png` / `.svg` | Logo |
+
+---
+
+# Negocio 3: «Modo Autónomo» — camisetas y tazas bajo demanda (Spreadshop, 0 €)
+
+Todo en [`tienda-camisetas/`](tienda-camisetas/). Empieza por
+[`tienda-camisetas/EMPIEZA-AQUI.md`](tienda-camisetas/EMPIEZA-AQUI.md).
+Diseños regenerables con `python3 scripts/generar_disenos.py` y `python3 scripts/generar_marca.py`.
